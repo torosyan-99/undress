@@ -735,7 +735,7 @@ svg {
     position: relative;
 }
 
-.choice-poses::after {
+.choice-poses__bg {
     content: '';
     position: absolute;
     width: 1000px;
@@ -928,6 +928,7 @@ svg {
 .photo__box {
     padding: 7px 32px 0;
     display: flex;
+    justify-content: center;
     gap: 24px;
     background: var(--inner-box-bg);
     border-radius: 20px;
@@ -1268,7 +1269,8 @@ svg {
     }
 
     .top__bg,
-    .section__bg {
+    .section__bg,
+    .choice-poses__bg{
         filter: blur(70px);
     }
 
@@ -1546,7 +1548,7 @@ svg {
         padding: 89px 0 150px;
     }
 
-    .generate::after {
+    .generate__bg {
         content: "";
         width: 1000px;
         height: 1000px;
@@ -1554,7 +1556,7 @@ svg {
         border-radius: 1000px;
         opacity: 0.25;
         background: linear-gradient(180deg, rgba(216, 3, 149, 0.80) 0%, rgba(216, 3, 149, 0.80) 100%);
-        filter: blur(250px);
+        filter: blur(70px);
         top: -308px;
         left: 50%;
         z-index: -1;

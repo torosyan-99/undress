@@ -767,6 +767,7 @@ svg {
     border-radius: 20px;
     background: var(--main-bg);
     margin: 16px 0 22px;
+    min-height: 250px;
 }
 
 .choice-poses__button {
@@ -815,6 +816,15 @@ svg {
     color: #0E1727;
     background: var(--primary-color);
 }
+
+.controllers__item {
+    display: none;
+}
+
+.controllers__item--active {
+    display: block;
+}
+
 
 .card {
     position: relative;

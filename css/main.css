@@ -223,14 +223,13 @@ svg {
     opacity: 0.5;
     background: linear-gradient(180deg, rgba(216, 3, 149, 0.80) 0%, rgba(216, 3, 149, 0.80) 100%);
     filter: blur(250px);
-    z-index: 1;
+    z-index: -1;
     pointer-events: none;
 }
 
 .top__inner {
     padding: 272px 16px 150px;
     position: relative;
-    z-index: 2;
 }
 
 .top__content {
@@ -284,6 +283,8 @@ svg {
 
 .section {
     padding: 150px 0;
+    position: relative;
+    z-index: 2;
 }
 
 .section__inner {
@@ -445,10 +446,11 @@ svg {
 .section__bg {
     position: absolute;
     opacity: 0.5;
-    z-index: -1;
     background: linear-gradient(180deg, rgba(216, 3, 149, 0.80) 0%, rgba(216, 3, 149, 0.80) 100%);
     filter: blur(250px);
     top: 0;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .section__text + .section__text {

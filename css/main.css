@@ -833,26 +833,31 @@ svg {
     border-radius: 20px;
 }
 
-.card--new::before,
-.card--top::before {
+.card__top{
     position: absolute;
     top: 0;
     right: 0;
+    height: 26px;
     padding: 8px 8px 3px;
     border-radius: 0 0 0 15px;
     z-index: 2;
     font-weight: 500;
     line-height: .9;
+    text-transform: uppercase;
 }
 
-.card--new::before {
-    content: 'NEW';
+.card__top--purple {
     background-color: #7103D8;
 }
 
-.card--top::before {
-    content: 'TOP';
+.card__top--orange {
     background-color: var(--orange);
+}
+
+.card__top--pink{
+    background: #D80395;
+    font-weight: 500;
+    font-size: 12px;
 }
 
 .card::after {
@@ -864,6 +869,7 @@ svg {
     left: -1px;
     right: -1px;
     bottom: 0;
+    transition: .4s all linear;
 }
 
 .card__img {
@@ -880,10 +886,12 @@ svg {
     text-align: center;
 }
 
-.card__crown {
-    width: 32px;
+.card__bottom {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 10px;
     height: 32px;
-    display: grid;
     position: absolute;
     place-items: center;
     border-radius: 15px 0 0 0;
@@ -891,8 +899,29 @@ svg {
     bottom: 0;
     right: 0;
     z-index: 2;
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
+.card__bottom span {
+    transform: translateY(1px);
+}
+
+.play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #FF9000;
+    box-shadow: 0 0 50px 0 #FF9000;
+}
 .photo {
     max-width: 594px;
     width: 100%;
@@ -957,6 +986,19 @@ svg {
 
 .photo__box-text span {
     color: var(--orange);
+}
+
+.photo__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.photo__card-name {
+    text-align: start;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
 }
 
 .authorization {
@@ -1366,6 +1408,10 @@ svg {
     .payments__slide-title {
         max-width: 46px;
         word-break: break-all;
+    }
+
+    .card__top--pink {
+        font-size: 16px;
     }
 
     .section--gray {

@@ -1269,15 +1269,10 @@ svg {
 
     .top__bg,
     .section__bg {
+        filter: blur(70px);
     }
 
-    .top__bg {
-        min-width: 768px;
-    }
-    .about .section__bg {
-        left: 0;
-        width: 100%;
-    }
+
 
     .top__content {
         max-width: 100%;

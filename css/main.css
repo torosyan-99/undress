@@ -225,7 +225,8 @@ svg {
     background: linear-gradient(180deg, rgba(216, 3, 149, 0.80) 0%, rgba(216, 3, 149, 0.80) 100%);
     filter: blur(250px);
     overflow: hidden;
-    z-index: 12;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .top__inner {
@@ -253,7 +254,6 @@ svg {
     position: absolute;
     right: -105px;
     bottom: 0;
-    z-index: -1;
 }
 
 .list-section {

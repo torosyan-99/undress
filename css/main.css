@@ -1371,6 +1371,7 @@ svg {
 
     .about .section__bg {
         left: 50%;
+        background: red;
         transform: translateX(-50%);
     }
 

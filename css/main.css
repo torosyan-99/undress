@@ -434,7 +434,6 @@ svg {
 }
 
 
-
 .section__bg {
     position: absolute;
     opacity: 0.5;
@@ -1269,8 +1268,15 @@ svg {
     }
 
     .top__bg,
-    .section__bg{
-        filter: blur(150px);
+    .section__bg {
+    }
+
+    .top__bg {
+        min-width: 768px;
+    }
+    .about .section__bg {
+        left: 0;
+        width: 100%;
     }
 
     .top__content {
@@ -1555,7 +1561,8 @@ svg {
         background: linear-gradient(180deg, rgba(216, 3, 149, 0.80) 0%, rgba(216, 3, 149, 0.80) 100%);
         filter: blur(250px);
         top: -308px;
-        left: 50%;z-index:  -1;
+        left: 50%;
+        z-index: -1;
         transform: translateX(-50%);
     }
 

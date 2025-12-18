@@ -1279,7 +1279,7 @@ svg {
     .top__bg,
     .section--gray .section__inner::after,
     .section__bg{
-        filter: blur(150px);
+        filter: none;
     }
 
     .top__content {

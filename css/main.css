@@ -1276,7 +1276,7 @@ svg {
     }
 
     .top__bg {
-        filter: none;
+        filter: blur(100px);
     }
 
     .top__content {

@@ -77,7 +77,6 @@ svg {
     line-height: 1.3;
     font-size: 20px;
     letter-spacing: var(--lp-size);
-    transition: .3s all linear;
 }
 
 .button span,
@@ -91,7 +90,7 @@ svg {
 }
 
 .button:hover {
-    background: rgba(255, 255, 255, 0.40);
+    background: rgba(255, 255, 255, 0.10);
 }
 
 .button-orange {
@@ -100,8 +99,8 @@ svg {
 }
 
 .button-orange:hover {
-    background: linear-gradient(180deg, #f38d00 0%, #f38d00 100%);
-    box-shadow: 0 0 50px 0 #f38d00;
+    background: linear-gradient(180deg, #FA0 0%, #F70 100%);
+    box-shadow: 0 0 60px 0 #FF9000;
 }
 
 .button-orange-second {
@@ -109,7 +108,7 @@ svg {
 }
 
 .button-orange-second:hover {
-    background: linear-gradient(180deg, #f38d00 0%, #f38d00 100%);
+    background: linear-gradient(180deg, #FA0 0%, #F70 100%);
 }
 
 .logo {
@@ -179,6 +178,10 @@ svg {
 }
 
 .header__lang {
+    position: relative;
+}
+
+.header__lang-button {
     width: 72px;
     height: 40px;
     font-size: 16px;
@@ -188,8 +191,35 @@ svg {
     align-items: center;
     justify-content: center;
     gap: 4px;
+    cursor: pointer;
     border-radius: 10px;
-    border: 1px solid var(--primary-color);
+}
+
+.header__lang-button:hover,
+.header__lang-button--active {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.header__lang-list {
+    position: absolute;
+    display: none;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    flex-direction: column;
+    gap: 6px;
+}
+
+.header__lang-button--active + .header__lang-list {
+    display: block;
+}
+
+.header__lang-list .header__lang-button,
+.header__lang-list .header__lang-button:hover {
+    background: none;
 }
 
 .header__lang span {
@@ -617,11 +647,16 @@ svg {
     flex-shrink: 0;
 }
 
+.faq__item:hover .faq__circle {
+    background: #F70;
+}
+
 .faq__circle svg {
     transition: .2s all linear;
 }
 
-.faq__item--active .faq__circle {
+.faq__item--active .faq__circle,
+.faq__item--active:hover .faq__circle {
     background: var(--main-bg);
 }
 
@@ -796,6 +831,7 @@ svg {
 
 .controllers {
     display: flex;
+    gap: 2px;
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -809,11 +845,19 @@ svg {
 .controllers__button {
     padding: 11px 23.5px;
     font-weight: 500;
+    border-radius: 100px;
+}
+
+.controllers__button:hover {
+    background: rgba(255, 255, 255, 0.05)
 }
 
 .controllers__button--active {
-    border-radius: 100px;
     color: #0E1727;
+    background: var(--primary-color);
+}
+
+.controllers__button--active:hover {
     background: var(--primary-color);
 }
 
@@ -833,7 +877,7 @@ svg {
     border-radius: 20px;
 }
 
-.card__top{
+.card__top {
     position: absolute;
     top: 0;
     right: 0;
@@ -854,7 +898,7 @@ svg {
     background-color: var(--orange);
 }
 
-.card__top--pink{
+.card__top--pink {
     background: #D80395;
     font-weight: 500;
     font-size: 12px;
@@ -922,6 +966,7 @@ svg {
     background: #FF9000;
     box-shadow: 0 0 50px 0 #FF9000;
 }
+
 .photo {
     max-width: 594px;
     width: 100%;
@@ -1054,7 +1099,8 @@ svg {
     gap: 8px;
 }
 
-.authorization__input {
+.input {
+    width: 100%;
     padding: 0 24px;
     height: 48px;
     border-radius: 10px;
@@ -1062,8 +1108,19 @@ svg {
     background: rgba(255, 255, 255, 0.05);
 }
 
-.authorization__input::placeholder {
-    color: var(--primary-color);
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.20);
+}
+
+.input:hover {
+    border: 1px solid rgba(255, 255, 255, 0.50);
+}
+
+.input:focus {
+    border: 1px solid rgba(255, 255, 255, 0.20);
+}
+.input-item {
+    position: relative;
 }
 
 .authorization__back {
@@ -1125,12 +1182,15 @@ svg {
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    transition: .4s all linear;
     display: grid;
     place-items: center;
 }
 
 .generate__button:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.generate__button:active {
     background-color: var(--orange);
 }
 
@@ -1322,10 +1382,9 @@ svg {
 
     .top__bg,
     .section__bg,
-    .choice-poses__bg{
+    .choice-poses__bg {
         filter: blur(70px);
     }
-
 
 
     .top__content {

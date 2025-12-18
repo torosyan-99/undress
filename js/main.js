@@ -117,3 +117,26 @@ const controllers = document.querySelectorAll('.controllers');
     activeControllerButton = button;
   })
 });
+
+
+let activeLang = null
+
+document.body.addEventListener('click', (e) => {
+  const target = e.target;
+
+  const langButton = target.closest('.header__lang-button');
+
+
+  if (langButton) {
+    if (activeLang) {
+      langButton.classList.remove('header__lang-button--active');
+      activeLang = null
+      return
+    }
+    langButton.classList.add('header__lang-button--active');
+    activeLang = langButton
+  } else if (activeLang) {
+    activeLang.classList.remove('header__lang-button--active');
+    activeLang = null
+  }
+})

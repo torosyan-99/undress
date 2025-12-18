@@ -209,7 +209,7 @@ svg {
 .top {
     position: relative;
     overflow: hidden;
-    z-index: 0;
+    z-index: 2;
 }
 
 .top__bg {
@@ -224,13 +224,14 @@ svg {
     background: linear-gradient(180deg, rgba(216, 3, 149, 0.80) 0%, rgba(216, 3, 149, 0.80) 100%);
     filter: blur(250px);
     overflow: hidden;
-    z-index: 0;
+    z-index: 1;
     pointer-events: none;
 }
 
 .top__inner {
     padding: 272px 16px 150px;
     position: relative;
+    z-index: 2;
 }
 
 .top__content {

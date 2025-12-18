@@ -212,7 +212,7 @@ svg {
     z-index: 2;
 }
 
-.top::after {
+.top__bg {
     min-width: 1440px;
     min-height: 1440px;
     position: absolute;
@@ -1275,7 +1275,7 @@ svg {
         transform: translateY(4px);
     }
 
-    .top::after,
+    .top__bg,
     .section--gray .section__inner::after {
         filter: blur(100px);
     }

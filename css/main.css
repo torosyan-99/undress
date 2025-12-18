@@ -222,8 +222,7 @@ svg {
     border-radius: 1440px;
     opacity: 0.5;
     background: linear-gradient(180deg, rgba(216, 3, 149, 0.80) 0%, rgba(216, 3, 149, 0.80) 100%);
-    filter: blur(250px);
-    overflow: hidden;
+    /*filter: blur(250px);*/
     z-index: 1;
     pointer-events: none;
 }

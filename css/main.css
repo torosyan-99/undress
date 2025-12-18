@@ -443,7 +443,6 @@ svg {
 }
 
 .section__bg {
-    content: "";
     position: absolute;
     opacity: 0.5;
     z-index: -1;
@@ -1276,8 +1275,9 @@ svg {
     }
 
     .top__bg,
-    .section--gray .section__inner::after {
-        filter: blur(100px);
+    .section--gray .section__inner::after,
+    .section__bg{
+        filter: blur(150px);
     }
 
     .top__content {
